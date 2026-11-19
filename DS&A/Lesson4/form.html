@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Search</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <main class="student-page">
+    <h1>Students</h1>
+
+    <form class="search-form" method="get">
+      <label for="student-name">Search by name</label>
+      <div class="search-controls">
+        <input
+          id="search_input"
+          name="name"
+          type="search"
+          placeholder="Enter a student name"
+        >
+        <button type="submit">Search</button>
+      </div>
+    </form>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Student ID</th>
+            <th scope="col">Student Name</th>
+          </tr>
+        </thead>
+        <tbody id="student_list"></tbody>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="./form.js"></script>
+</body>
+</html>
