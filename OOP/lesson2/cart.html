@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Demo</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Shop</a>
+  </header>
+
+  <main class="shop-layout">
+    <section class="catalog">
+      <h1>Products</h1>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <aside class="cart-panel" aria-labelledby="cart-title">
+      <div class="cart-heading">
+        <h2 id="cart-title">Your Cart</h2>
+        <span id="cart-count" class="cart-count">0</span>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+        <button id="checkout-button" class="checkout-button" type="button" disabled>
+          Checkout
+        </button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="cart.js"></script>
+</body>
+</html>
