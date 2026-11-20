@@ -1,0 +1,25 @@
+classDiagram
+
+    class Person {
+        <<interface>>
+        +id: string
+        +name: string
+        +phone: string
+    }
+
+    class Trainer {
+        +specialization: string
+        -members: Member[]
+        +registerMember(member: Member): boolean
+        +findMember(id: string): Member
+    }
+
+    class Member {
+        -trainer: Trainer
+        +fitnessGoal: string
+        +setTrainer(trainer: Trainer): void
+    }
+
+    Person <|.. Trainer
+    Person <|.. Member
+    Trainer "1" --> "0..*" Member : manages
